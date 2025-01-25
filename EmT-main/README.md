@@ -5,6 +5,7 @@ EmT由四个主要部分组成：（1）时间图构建模块（TGC）、（2）
 ![image](https://github.com/user-attachments/assets/f4b5f360-5fd9-468b-bc54-ac92e247486f)
 
 EmT 模型定义文件EmT.py
+
 准备好数据集后，运行对应的主文件，例如SEED数据集，运行main-SEED.py
 
 # Cite
