@@ -16,8 +16,7 @@ PR-PL: A Novel Transfer Learning Framework with Prototypical Representation base
 # 准备
 * 需要的数据集: [SEED](https://bcmi.sjtu.edu.cn/~seed/index.html) and [SEED-IV](https://bcmi.sjtu.edu.cn/~seed/index.html)
 
-# Training 
-需要安装Python 3.7；Pytorch 1.3.1；NVIDIA CUDA 9.2；Numpy 1.20.3；Scikit-learn 0.23.2；scipy 1.3.1
+# 训练
 
 PR-PL 模型定义文件：model_PR_PL.py
 
