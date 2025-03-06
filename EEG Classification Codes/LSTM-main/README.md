@@ -6,6 +6,7 @@ Data文件夹里的数据集是用Xmuse设备采集的数据
 下面是代码解释：
 1.准备数据集
 将脑电数据集导入Pycharm，即设置EEG文件夹的路径。此路径包含前期已经处理好的所有被试的数据文件。
+
 ![image](https://github.com/user-attachments/assets/163a4e47-cf9b-4992-9de5-13a7408a17b5)
 
 
@@ -13,11 +14,13 @@ Data文件夹里的数据集是用Xmuse设备采集的数据
 读取所有.CSV文件
 将被试的标签存储在数组中（0表示非焦虑，1表示焦虑）。
 将读取的文件和存储标签的数组传入加载函数，用来加载数据并为每个文件分配标签。
+
 ![image](https://github.com/user-attachments/assets/3cabc48f-ac71-4a2e-a8e9-056180c230c9)
 
 
 3.划分数据集
 加载完数据之后，将数据集划分为训练集和测试集
+
 ![image](https://github.com/user-attachments/assets/3227b134-e1f1-4992-a50c-acc97c7a56b6)
 
 
@@ -29,6 +32,7 @@ Data文件夹里的数据集是用Xmuse设备采集的数据
 还加入了批量归一化层，对每一层的输出进行归一化处理，有助于加速模型的收敛速度并提高模型的泛化能力。
 最后是全连接层，使用sigmoid激活函数，将输出值映射到 0 和 1 之间，使模型能够完成二分类任务。
 模型设计完成后，对模型进行编译，就可以开始训练了。
+
 ![image](https://github.com/user-attachments/assets/f8b4a0f9-0fb7-4c59-9ad2-4e37e71396b8)
 
 
