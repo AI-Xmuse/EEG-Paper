@@ -6,17 +6,17 @@ Data文件夹里的数据集是用Xmuse设备采集的数据
 下面是代码解释：
 1.准备数据集
 将脑电数据集导入Pycharm，即设置EEG文件夹的路径。此路径包含前期已经处理好的所有被试的数据文件。
-![image](https://github.com/user-attachments/assets/eeb9c749-e55e-4da4-a3c0-d171e10994c7)
+    ![image](https://github.com/user-attachments/assets/eeb9c749-e55e-4da4-a3c0-d171e10994c7)
 
 2.读取数据集
 读取所有.CSV文件
 将被试的标签存储在数组中（0表示非焦虑，1表示焦虑）。
 将读取的文件和存储标签的数组传入加载函数，用来加载数据并为每个文件分配标签。
-![image](https://github.com/user-attachments/assets/2f242130-d408-4f8c-882e-570e238a410a)
+    ![image](https://github.com/user-attachments/assets/2f242130-d408-4f8c-882e-570e238a410a)
 
 3.划分数据集
 加载完数据之后，将数据集划分为训练集和测试集
-![image](https://github.com/user-attachments/assets/9f92bba0-735f-4dbd-a172-b4d1849623b0)
+    ![image](https://github.com/user-attachments/assets/9f92bba0-735f-4dbd-a172-b4d1849623b0)
 
 4.模型构建与训练
 以LSTM模型为例：
@@ -26,15 +26,16 @@ Data文件夹里的数据集是用Xmuse设备采集的数据
 还加入了批量归一化层，对每一层的输出进行归一化处理，有助于加速模型的收敛速度并提高模型的泛化能力。
 最后是全连接层，使用sigmoid激活函数，将输出值映射到 0 和 1 之间，使模型能够完成二分类任务。
 模型设计完成后，对模型进行编译，就可以开始训练了。
-![image](https://github.com/user-attachments/assets/52d2e055-5282-46e9-8baf-a6bc4646e30a)
+    ![image](https://github.com/user-attachments/assets/52d2e055-5282-46e9-8baf-a6bc4646e30a)
 
 5.设置超参数
 编译过程的核心是优化器、学习率、损失函数和评估指标的设置，确保模型能够有效地学习并准确衡量其性能。以下图为例，这里使用的是Adam优化器，学习率为0.001，使用二元交叉熵损失函数，适用于二分类问题，使用评估指标准确率，用于监控模型在训练和测试过程中的准确率
-![image](https://github.com/user-attachments/assets/60cf55e3-9a32-41d7-8c6d-74076598dd3a)
+
+    ![image](https://github.com/user-attachments/assets/60cf55e3-9a32-41d7-8c6d-74076598dd3a)
 
 在训练过程中，我们指定了训练轮数为 10，批量大小为 1，也就是说，每次参数更新都会用一个样本，而整个训练会循环 10 次。
-![image](https://github.com/user-attachments/assets/819661ff-dcda-426d-b152-ad5a32f73356)
+    ![image](https://github.com/user-attachments/assets/819661ff-dcda-426d-b152-ad5a32f73356)
 
 5.得到训练结果
 在训练完成后，我们可以获得每一轮的训练准确率，并将这些准确率绘制成曲线，清晰地展示模型的学习效果。
-![image](https://github.com/user-attachments/assets/e15c0863-295c-4ddb-b5e0-36b73664a343)
+    ![image](https://github.com/user-attachments/assets/e15c0863-295c-4ddb-b5e0-36b73664a343)
