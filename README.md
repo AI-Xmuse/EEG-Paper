@@ -5,7 +5,7 @@
 
 “脑电设备对比论文”文件夹包含了对不同EEG设备性能的对比分析，这些资料可以帮助研究人员和开发者选择合适的设备进行实验和开发
 
-存储库EmT-main、PGCN-main和PR-RL-main包含相应论文的代码。每个存储库都包含一个 README 文件，其中提供了有关如何运行代码的详细说明。
+“EEG Classification Codes”文件夹里存储库EmT-main、PGCN-main、LSTM-main和PR-RL-main等代码。每个存储库都包含一个 README 文件，其中提供了有关如何运行代码的详细说明。
 代码仅用于研究目的，不用于商业用途
 
 贡献
