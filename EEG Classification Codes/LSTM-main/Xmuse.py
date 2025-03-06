@@ -18,7 +18,7 @@ data_dir = './Data/'  # 你的数据路径
 # 读取所有CSV文件
 csv_files = [f for f in os.listdir(data_dir) if f.endswith('.csv')]
 # 假设你已经有标签数组
-labels_array = [0, 0, 0, 0, 0, 1, 0, 0]  # 8个标签，0表示非焦虑，1表示焦虑
+labels_array = [0, 0, 0, 0, 0, 1, 0, 0,1,1,0,0,0,0,1,1,0,0,0,1]  # 20个标签，0表示非焦虑，1表示焦虑
 # 加载EEG数据并使用给定的标签
 def load_eeg_data(csv_files, data_dir, labels_array, num_samples=85000):
     eeg_data = []
